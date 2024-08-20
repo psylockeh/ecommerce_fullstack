@@ -1,0 +1,49 @@
+<div class="cart-container">
+    <h1>Seu carrinho de compras</h1>
+
+    
+    <button class="link" (click)="redirectToVitrine()">Voltar para Home</button>
+  
+    <table class="table" *ngIf="lista.length > 0">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Qtde.</th>
+          <th>Valor Unitário</th>
+          <th>Valor Total</th>
+          <th>Remover Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of lista">
+          <td>{{ item.nomeProduto }}</td>
+          <td>{{ item.qtd }}</td>
+          <td>R$ {{ item.valor }}</td>
+          <td>R$ {{ item.total }}</td>
+          <td><button class="btn-remove" (click)="removerItem(item)">Remover</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total:</th>
+          <th></th>
+          <th></th>
+          <th>R$ {{ totalCarrinho }}</th>
+          <th></th>
+        </tr>
+      </tfoot>
+    </table>
+  
+    <div class="cart-actions" *ngIf="lista.length > 0">
+      <button class="btn btn-danger" (click)="limpar();">Limpar carrinho</button>
+      <button class="btn btn-primary" (click)="saveCartAndGenerateOrder()">Finalizar Pedido</button>
+    </div>
+  
+    <div *ngIf="mensagem" class="alert alert-info">{{ mensagem }}</div>
+  
+    <div *ngIf="orderNumber">
+      <div>Último pedido gerado: {{ orderNumber }}</div>
+    </div>
+
+  </div>
+  

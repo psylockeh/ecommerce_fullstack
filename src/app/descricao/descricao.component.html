@@ -1,0 +1,19 @@
+<div class="descricao-container" *ngIf="obj">
+  <div class="card">
+    <div class="card-body">
+      <h2>{{ obj.nome }}</h2>
+      <p>{{ obj.orientacoes }}</p>
+      <img [src]="'assets/' + obj.codigo + '.jpg'" width="300px" alt="{{ obj.nome }}">
+      <div class="valor">R$ {{ obj.valor }}</div>
+      <div class="promo" *ngIf="obj.valorPromo > 0">Por R$ {{ obj.valorPromo }}</div>
+      <div>Marca: {{ obj.marca }}</div>
+      <div>Estampa: {{ obj.estampa }}</div>
+      <div>Tecido: {{ obj.tecido }}</div>
+      <div>Cor: {{ obj.cor }}</div>
+      <button *ngIf="obj.estoque > 0" 
+        class="btn btn-success"
+        (click)="comprar(obj);">Comprar</button>
+      <h3 *ngIf="obj?.estoque == 0">Sem Estoque</h3>
+    </div>
+  </div>
+</div>

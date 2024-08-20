@@ -1,0 +1,40 @@
+.descricao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #636330;
+}
+
+.card {
+  background-color: #ffffffe8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card img {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.valor {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.promo {
+  font-size: 1.2em;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 15px;
+}

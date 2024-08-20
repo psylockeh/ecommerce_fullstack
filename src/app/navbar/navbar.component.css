@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+form-control {
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-green {
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-green:hover {
+  background-color: darkgreen;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+.search-container{
+  color: #333;
+  margin: -10px;
+  padding: -10px;
+  height: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-list {
+  background-color: rgb(15, 36, 54);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-list li {
+  float: left;
+}
+
+.nav-list li a {
+  display: block;
+  color: #4d3d11b4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  background-color: #111;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list li {
+    float: none;
+  }
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  width: 200px;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+  width: 300px;
+}
+
+.search-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+  .search-input {
+    width: 150px;
+  }
+
+  .search-input:focus {
+    width: 200px;
+  }
+}
+
+.search-container {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card-img-top {
+  cursor: pointer;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-primary {
+  margin-right: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .card {
+    margin-bottom: 15px;
+  }
+
+  .card-img-top {
+    max-height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
